@@ -1,0 +1,2 @@
+# DeepLearning_GarbageClassification
+基于迁移学习的垃圾分类方法研究
