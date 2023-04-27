@@ -138,3 +138,7 @@ MobileNetV2模型是针对于MobileNet模型的改进，在此基础上提出了
 
 在加入Dropout机制后，模型的表现稳定，且准确率依旧能够保持85%，因此将该模型确定为实际垃圾分类任务中的模型。
 
+
+
+`邮箱：tianguohui_data@163.com`
+`WeChat/QQ：2950351262`
