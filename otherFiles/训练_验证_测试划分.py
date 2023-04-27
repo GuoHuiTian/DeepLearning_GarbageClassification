@@ -1,15 +1,13 @@
-#split_data.py
-#划分数据集flower_data，数据集划分到flower_datas中，训练集：验证集：测试集比例为6：2：2
-
 import os
 import random
 from shutil import copy2
 
 # 源文件路径
-file_path = r"F:/毕设_垃圾分类/总结综合/数据集_120类"
+file_path = r"F:/垃圾分类/总结综合/数据集_120类"
 # 新文件路径
-new_file_path = r"F:/毕设_垃圾分类/总结综合/images"
+new_file_path = r"F:/垃圾分类/总结综合/images"
 
+# 比例
 split_rate = [0.8, 0.1, 0.1]
 print("Starting...")
 print("Ratio= {}:{}:{}".format(int(split_rate[0] * 10), int(split_rate[1] * 10), int(split_rate[2] * 10)))
