@@ -103,7 +103,7 @@ MobileNetV2模型是针对于MobileNet模型的改进，在此基础上提出了
 
 **MobileNetV2_connect** 训练结果如图
 
-![image](https://user-images.githubusercontent.com/131667281/234798731-a8355c8f-77c9-48a6-ae58-fd59980988d4.png)
+![image](https://user-images.githubusercontent.com/131667281/234799308-72b3fabb-83e8-4367-ac8a-6c38f229cebc.png)
 
 **MobileNetV2_140after** 训练结果如图
 
