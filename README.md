@@ -93,3 +93,23 @@ MobileNetV2模型是针对于MobileNet模型的改进，在此基础上提出了
 
 #### 2.2.2 实验结果
 深度学习框架与超参数的设置跟ResNet50模型实验的设置相同。
+三组不同的实验，模型的训练参数与冻结参数如表
+
+| 模型 | 训练参数 | 冻结参数 |
+| :--: | :--: | :--: |
+| MobileNetV2_connect | 153720 | 2257984 |
+| MobileNetV2_140after | 1193720 | 1217984 |
+| MobileNetV2_all | 2377592 | 34112 |
+
+**MobileNetV2_connect** 训练结果如图
+
+![image](https://user-images.githubusercontent.com/131667281/234798731-a8355c8f-77c9-48a6-ae58-fd59980988d4.png)
+
+**MobileNetV2_140after** 训练结果如图
+
+![image](https://user-images.githubusercontent.com/131667281/234798891-c63cea49-60c7-46e8-9fa0-b9fb5fa9722b.png)
+
+**MobileNetV2_all** 训练结果如图
+
+![image](https://user-images.githubusercontent.com/131667281/234798964-fc4b4934-6d46-4bb2-b2c8-3aa26fb4190f.png)
+
