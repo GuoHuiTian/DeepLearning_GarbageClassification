@@ -2,7 +2,7 @@ import tensorflow as tf
 import matplotlib.pyplot as plt
 from time import *
 
-image_path ="F:/毕设_垃圾分类/AlexNet实现/数据集_多分类_1/"  # 代码所用图集的文件夹
+image_path ="file_path"  # 代码所用图集的文件夹
 train_dir = image_path  + "train"
 validation_dir = image_path  + "val"
 
