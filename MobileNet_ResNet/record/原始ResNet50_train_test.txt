@@ -1,0 +1,198 @@
+C:\ProgramData\Anaconda3\envs\tensorflow-gpu\python.exe F:/毕设_垃圾分类/总结综合/my_MobileNet/原始_ResNet50_train.py
+2022-05-23 09:31:32.465594: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cudart64_110.dll
+Found 31550 files belonging to 120 classes.
+2022-05-23 09:31:36.604533: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library nvcuda.dll
+2022-05-23 09:31:36.637468: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1733] Found device 0 with properties: 
+pciBusID: 0000:01:00.0 name: GeForce GTX 1650 computeCapability: 7.5
+coreClock: 1.56GHz coreCount: 16 deviceMemorySize: 4.00GiB deviceMemoryBandwidth: 119.24GiB/s
+2022-05-23 09:31:36.637782: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cudart64_110.dll
+2022-05-23 09:31:36.649037: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cublas64_11.dll
+2022-05-23 09:31:36.649191: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cublasLt64_11.dll
+2022-05-23 09:31:36.653308: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cufft64_10.dll
+2022-05-23 09:31:36.654811: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library curand64_10.dll
+2022-05-23 09:31:36.663952: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cusolver64_11.dll
+2022-05-23 09:31:36.667263: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cusparse64_11.dll
+2022-05-23 09:31:36.668227: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cudnn64_8.dll
+2022-05-23 09:31:36.668445: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1871] Adding visible gpu devices: 0
+2022-05-23 09:31:36.668833: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-05-23 09:31:36.669524: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1733] Found device 0 with properties: 
+pciBusID: 0000:01:00.0 name: GeForce GTX 1650 computeCapability: 7.5
+coreClock: 1.56GHz coreCount: 16 deviceMemorySize: 4.00GiB deviceMemoryBandwidth: 119.24GiB/s
+2022-05-23 09:31:36.669960: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1871] Adding visible gpu devices: 0
+2022-05-23 09:31:37.247695: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1258] Device interconnect StreamExecutor with strength 1 edge matrix:
+2022-05-23 09:31:37.247862: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1264]      0 
+2022-05-23 09:31:37.247958: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1277] 0:   N 
+2022-05-23 09:31:37.248220: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1418] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 2143 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:01:00.0, compute capability: 7.5)
+Found 3932 files belonging to 120 classes.
+['其他垃圾_PE塑料袋', '其他垃圾_一次性杯子', '其他垃圾_一次性棉签', '其他垃圾_口罩', '其他垃圾_唱片', '其他垃圾_干燥剂', '其他垃圾_打火机', '其他垃圾_搓澡巾', '其他垃圾_滚筒纸', '其他垃圾_点燃的香烟', '其他垃圾_眼镜', '其他垃圾_笔', '其他垃圾_胶带', '其他垃圾_验孕棒', '其他垃圾_鸡毛掸', '厨余垃圾_圣女果', '厨余垃圾_地瓜', '厨余垃圾_大蒜', '厨余垃圾_梨', '厨余垃圾_橙子', '厨余垃圾_火龙果', '厨余垃圾_瓜子壳', '厨余垃圾_番茄', '厨余垃圾_白菜叶', '厨余垃圾_苹果', '厨余垃圾_草莓', '厨余垃圾_菠萝', '厨余垃圾_菠萝蜜', '厨余垃圾_蘑菇', '厨余垃圾_蛋', '厨余垃圾_蛋挞', '厨余垃圾_蛋糕', '厨余垃圾_西瓜皮', '厨余垃圾_豆', '厨余垃圾_豆腐', '厨余垃圾_辣椒', '厨余垃圾_面包', '厨余垃圾_饼干', '厨余垃圾_香蕉皮', '可回收物_A4纸', '可回收物_一次性筷子', '可回收物_不锈钢管', '可回收物_乒乓球拍', '可回收物_书', '可回收物_保温杯', '可回收物_信封', '可回收物_充电头', '可回收物_充电宝', '可回收物_充电线', '可回收物_凳子', '可回收物_刀', '可回收物_剪刀', '可回收物_勺子叉子', '可回收物_包', '可回收物_卡', '可回收物_台灯', '可回收物_吹风机', '可回收物_呼啦圈', '可回收物_塑料瓶', '可回收物_塑料盆', '可回收物_头戴式耳机', '可回收物_尺子', '可回收物_布制品', '可回收物_帽子', '可回收物_手机', '可回收物_手电筒', '可回收物_手表', '可回收物_打气筒', '可回收物_拉杆箱', '可回收物_插线板', '可回收物_收音机', '可回收物_放大镜', '可回收物_易拉罐', '可回收物_望远镜', '可回收物_木制切菜板', '可回收物_木质梳子', '可回收物_木质锅铲', '可回收物_枕头', '可回收物_桌子', '可回收物_水壶', '可回收物_水杯', '可回收物_泡沫板', '可回收物_灭火器', '可回收物_热水瓶', '可回收物_电动剃须刀', '可回收物_电子秤', '可回收物_电熨斗', '可回收物_电磁炉', '可回收物_电路板', '可回收物_电风扇', '可回收物_电饭煲', '可回收物_盘子', '可回收物_碗', '可回收物_箱子', '可回收物_纸板', '可回收物_衣架', '可回收物_袜子', '可回收物_裙子', '可回收物_裤子', '可回收物_计算器', '可回收物_订书机', '可回收物_话筒', '可回收物_路由器', '可回收物_轮胎', '可回收物_遥控器', '可回收物_钥匙', '可回收物_铁丝球', '可回收物_键盘', '可回收物_镊子', '可回收物_闹钟', '可回收物_雨伞', '可回收物_鞋', '可回收物_鼠标', '有害垃圾_太阳能电池', '有害垃圾_灯', '有害垃圾_电池', '有害垃圾_纽扣电池', '有害垃圾_胶水', '有害垃圾_药品包装', '有害垃圾_蓄电池']
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+rescaling (Rescaling)        (None, 224, 224, 3)       0         
+_________________________________________________________________
+resnet50 (Functional)        (None, 7, 7, 2048)        23587712  
+_________________________________________________________________
+global_average_pooling2d (Gl (None, 2048)              0         
+_________________________________________________________________
+dense (Dense)                (None, 120)               245880    
+=================================================================
+Total params: 23,833,592
+Trainable params: 245,880
+Non-trainable params: 23,587,712
+_________________________________________________________________
+Epoch 1/30
+2022-05-23 09:31:40.867805: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:176] None of the MLIR Optimization Passes are enabled (registered 2)
+2022-05-23 09:31:43.491557: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cudnn64_8.dll
+2022-05-23 09:31:44.076962: I tensorflow/stream_executor/cuda/cuda_dnn.cc:359] Loaded cuDNN version 8101
+2022-05-23 09:31:44.723976: W tensorflow/stream_executor/gpu/redzone_allocator.cc:314] Unknown: Failed to create a NewWriteableFile: C:\Users\С����\AppData\Local\Temp\/tempfile-LAPTOP-R5UG5FPN-20d8-14956-5dfa3cd8c09d3 : �ܾ����ʡ�
+; Input/output error
+Relying on driver to perform ptx compilation. 
+Modify $PATH to customize ptxas location.
+This message will be only logged once.
+2022-05-23 09:31:44.792102: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cublas64_11.dll
+2022-05-23 09:31:45.377763: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cublasLt64_11.dll
+2022-05-23 09:31:46.202846: W tensorflow/core/common_runtime/bfc_allocator.cc:271] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.29GiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+2022-05-23 09:31:46.203219: W tensorflow/core/common_runtime/bfc_allocator.cc:271] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.29GiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+2022-05-23 09:31:46.242253: W tensorflow/core/common_runtime/bfc_allocator.cc:271] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.34GiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+2022-05-23 09:31:46.242596: W tensorflow/core/common_runtime/bfc_allocator.cc:271] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.34GiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+1971/1972 [============================>.] - ETA: 0s - loss: 4.3588 - accuracy: 0.07892022-05-23 09:41:32.447518: W tensorflow/core/common_runtime/bfc_allocator.cc:271] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.28GiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+2022-05-23 09:41:32.447872: W tensorflow/core/common_runtime/bfc_allocator.cc:271] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.28GiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+2022-05-23 09:41:32.486287: W tensorflow/core/common_runtime/bfc_allocator.cc:271] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.33GiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+2022-05-23 09:41:32.486635: W tensorflow/core/common_runtime/bfc_allocator.cc:271] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.33GiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+1972/1972 [==============================] - ETA: 0s - loss: 4.3586 - accuracy: 0.07892022-05-23 09:42:44.033169: W tensorflow/core/common_runtime/bfc_allocator.cc:271] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.28GiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+2022-05-23 09:42:44.033579: W tensorflow/core/common_runtime/bfc_allocator.cc:271] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.28GiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+1972/1972 [==============================] - 665s 334ms/step - loss: 4.3586 - accuracy: 0.0789 - val_loss: 4.1313 - val_accuracy: 0.1104
+Epoch 2/30
+1972/1972 [==============================] - 641s 324ms/step - loss: 3.9684 - accuracy: 0.1328 - val_loss: 3.9165 - val_accuracy: 0.1460
+Epoch 3/30
+1972/1972 [==============================] - 645s 326ms/step - loss: 3.7802 - accuracy: 0.1623 - val_loss: 3.7863 - val_accuracy: 0.1643
+Epoch 4/30
+1972/1972 [==============================] - 640s 323ms/step - loss: 3.6527 - accuracy: 0.1838 - val_loss: 3.6931 - val_accuracy: 0.1821
+Epoch 5/30
+1972/1972 [==============================] - 660s 334ms/step - loss: 3.5555 - accuracy: 0.2009 - val_loss: 3.6214 - val_accuracy: 0.1928
+Epoch 6/30
+1972/1972 [==============================] - 660s 334ms/step - loss: 3.4771 - accuracy: 0.2156 - val_loss: 3.5636 - val_accuracy: 0.2040
+Epoch 7/30
+1972/1972 [==============================] - 648s 327ms/step - loss: 3.4105 - accuracy: 0.2293 - val_loss: 3.5148 - val_accuracy: 0.2136
+Epoch 8/30
+1972/1972 [==============================] - 651s 329ms/step - loss: 3.3528 - accuracy: 0.2394 - val_loss: 3.4724 - val_accuracy: 0.2190
+Epoch 9/30
+1972/1972 [==============================] - 649s 328ms/step - loss: 3.3017 - accuracy: 0.2473 - val_loss: 3.4364 - val_accuracy: 0.2243
+Epoch 10/30
+1972/1972 [==============================] - 643s 325ms/step - loss: 3.2560 - accuracy: 0.2573 - val_loss: 3.4039 - val_accuracy: 0.2342
+Epoch 11/30
+1972/1972 [==============================] - 645s 326ms/step - loss: 3.2147 - accuracy: 0.2651 - val_loss: 3.3745 - val_accuracy: 0.2398
+Epoch 12/30
+1972/1972 [==============================] - 654s 331ms/step - loss: 3.1761 - accuracy: 0.2735 - val_loss: 3.3479 - val_accuracy: 0.2459
+Epoch 13/30
+1972/1972 [==============================] - 644s 325ms/step - loss: 3.1410 - accuracy: 0.2822 - val_loss: 3.3237 - val_accuracy: 0.2510
+Epoch 14/30
+1972/1972 [==============================] - 649s 328ms/step - loss: 3.1082 - accuracy: 0.2888 - val_loss: 3.3019 - val_accuracy: 0.2518
+Epoch 15/30
+1972/1972 [==============================] - 648s 327ms/step - loss: 3.0777 - accuracy: 0.2962 - val_loss: 3.2812 - val_accuracy: 0.2594
+Epoch 16/30
+1972/1972 [==============================] - 645s 326ms/step - loss: 3.0489 - accuracy: 0.3015 - val_loss: 3.2614 - val_accuracy: 0.2627
+Epoch 17/30
+1972/1972 [==============================] - 660s 334ms/step - loss: 3.0215 - accuracy: 0.3081 - val_loss: 3.2442 - val_accuracy: 0.2686
+Epoch 18/30
+1972/1972 [==============================] - 652s 330ms/step - loss: 2.9956 - accuracy: 0.3152 - val_loss: 3.2272 - val_accuracy: 0.2726
+Epoch 19/30
+1972/1972 [==============================] - 648s 327ms/step - loss: 2.9710 - accuracy: 0.3197 - val_loss: 3.2115 - val_accuracy: 0.2787
+Epoch 20/30
+1972/1972 [==============================] - 648s 327ms/step - loss: 2.9478 - accuracy: 0.3252 - val_loss: 3.1967 - val_accuracy: 0.2815
+Epoch 21/30
+1972/1972 [==============================] - 646s 327ms/step - loss: 2.9254 - accuracy: 0.3292 - val_loss: 3.1822 - val_accuracy: 0.2859
+Epoch 22/30
+1972/1972 [==============================] - 647s 327ms/step - loss: 2.9039 - accuracy: 0.3339 - val_loss: 3.1689 - val_accuracy: 0.2876
+Epoch 23/30
+1972/1972 [==============================] - 656s 332ms/step - loss: 2.8834 - accuracy: 0.3385 - val_loss: 3.1558 - val_accuracy: 0.2887
+Epoch 24/30
+1972/1972 [==============================] - 653s 330ms/step - loss: 2.8637 - accuracy: 0.3423 - val_loss: 3.1435 - val_accuracy: 0.2958
+Epoch 25/30
+1972/1972 [==============================] - 646s 326ms/step - loss: 2.8441 - accuracy: 0.3467 - val_loss: 3.1321 - val_accuracy: 0.2978
+Epoch 26/30
+1972/1972 [==============================] - 643s 325ms/step - loss: 2.8259 - accuracy: 0.3498 - val_loss: 3.1217 - val_accuracy: 0.2993
+Epoch 27/30
+1972/1972 [==============================] - 644s 326ms/step - loss: 2.8080 - accuracy: 0.3551 - val_loss: 3.1109 - val_accuracy: 0.3026
+Epoch 28/30
+1972/1972 [==============================] - 655s 331ms/step - loss: 2.7909 - accuracy: 0.3590 - val_loss: 3.1008 - val_accuracy: 0.3042
+Epoch 29/30
+1972/1972 [==============================] - 643s 325ms/step - loss: 2.7744 - accuracy: 0.3631 - val_loss: 3.0905 - val_accuracy: 0.3067
+Epoch 30/30
+1972/1972 [==============================] - 645s 326ms/step - loss: 2.7580 - accuracy: 0.3655 - val_loss: 3.0818 - val_accuracy: 0.3082
+C:\ProgramData\Anaconda3\envs\tensorflow-gpu\lib\site-packages\tensorflow\python\keras\utils\generic_utils.py:497: CustomMaskWarning: Custom mask layers require a config and must override get_config. When loading, the custom mask layer must be passed to the custom_objects argument.
+  category=CustomMaskWarning)
+该循环程序运行时间： 19477.558426856995 s
+
+进程已结束，退出代码为 0
+
+
+
+C:\ProgramData\Anaconda3\envs\tensorflow-gpu\python.exe F:/毕设_垃圾分类/总结综合/my_MobileNet/model_test/原始_ResNet50__modes_test.py
+2022-05-23 20:22:32.153533: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cudart64_110.dll
+120
+Found 3866 files belonging to 120 classes.
+2022-05-23 20:22:35.772127: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library nvcuda.dll
+2022-05-23 20:22:35.810219: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1733] Found device 0 with properties: 
+pciBusID: 0000:01:00.0 name: GeForce GTX 1650 computeCapability: 7.5
+coreClock: 1.56GHz coreCount: 16 deviceMemorySize: 4.00GiB deviceMemoryBandwidth: 119.24GiB/s
+2022-05-23 20:22:35.810512: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cudart64_110.dll
+2022-05-23 20:22:35.824863: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cublas64_11.dll
+2022-05-23 20:22:35.825030: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cublasLt64_11.dll
+2022-05-23 20:22:35.830728: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cufft64_10.dll
+2022-05-23 20:22:35.833412: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library curand64_10.dll
+2022-05-23 20:22:35.845177: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cusolver64_11.dll
+2022-05-23 20:22:35.849590: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cusparse64_11.dll
+2022-05-23 20:22:35.851304: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cudnn64_8.dll
+2022-05-23 20:22:35.851545: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1871] Adding visible gpu devices: 0
+2022-05-23 20:22:35.851951: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-05-23 20:22:35.852756: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1733] Found device 0 with properties: 
+pciBusID: 0000:01:00.0 name: GeForce GTX 1650 computeCapability: 7.5
+coreClock: 1.56GHz coreCount: 16 deviceMemorySize: 4.00GiB deviceMemoryBandwidth: 119.24GiB/s
+2022-05-23 20:22:35.853238: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1871] Adding visible gpu devices: 0
+2022-05-23 20:22:36.625040: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1258] Device interconnect StreamExecutor with strength 1 edge matrix:
+2022-05-23 20:22:36.625207: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1264]      0 
+2022-05-23 20:22:36.625300: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1277] 0:   N 
+2022-05-23 20:22:36.625581: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1418] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 2143 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:01:00.0, compute capability: 7.5)
+['其他垃圾_PE塑料袋', '其他垃圾_一次性杯子', '其他垃圾_一次性棉签', '其他垃圾_口罩', '其他垃圾_唱片', '其他垃圾_干燥剂', '其他垃圾_打火机', '其他垃圾_搓澡巾', '其他垃圾_滚筒纸', '其他垃圾_点燃的香烟', '其他垃圾_眼镜', '其他垃圾_笔', '其他垃圾_胶带', '其他垃圾_验孕棒', '其他垃圾_鸡毛掸', '厨余垃圾_圣女果', '厨余垃圾_地瓜', '厨余垃圾_大蒜', '厨余垃圾_梨', '厨余垃圾_橙子', '厨余垃圾_火龙果', '厨余垃圾_瓜子壳', '厨余垃圾_番茄', '厨余垃圾_白菜叶', '厨余垃圾_苹果', '厨余垃圾_草莓', '厨余垃圾_菠萝', '厨余垃圾_菠萝蜜', '厨余垃圾_蘑菇', '厨余垃圾_蛋', '厨余垃圾_蛋挞', '厨余垃圾_蛋糕', '厨余垃圾_西瓜皮', '厨余垃圾_豆', '厨余垃圾_豆腐', '厨余垃圾_辣椒', '厨余垃圾_面包', '厨余垃圾_饼干', '厨余垃圾_香蕉皮', '可回收物_A4纸', '可回收物_一次性筷子', '可回收物_不锈钢管', '可回收物_乒乓球拍', '可回收物_书', '可回收物_保温杯', '可回收物_信封', '可回收物_充电头', '可回收物_充电宝', '可回收物_充电线', '可回收物_凳子', '可回收物_刀', '可回收物_剪刀', '可回收物_勺子叉子', '可回收物_包', '可回收物_卡', '可回收物_台灯', '可回收物_吹风机', '可回收物_呼啦圈', '可回收物_塑料瓶', '可回收物_塑料盆', '可回收物_头戴式耳机', '可回收物_尺子', '可回收物_布制品', '可回收物_帽子', '可回收物_手机', '可回收物_手电筒', '可回收物_手表', '可回收物_打气筒', '可回收物_拉杆箱', '可回收物_插线板', '可回收物_收音机', '可回收物_放大镜', '可回收物_易拉罐', '可回收物_望远镜', '可回收物_木制切菜板', '可回收物_木质梳子', '可回收物_木质锅铲', '可回收物_枕头', '可回收物_桌子', '可回收物_水壶', '可回收物_水杯', '可回收物_泡沫板', '可回收物_灭火器', '可回收物_热水瓶', '可回收物_电动剃须刀', '可回收物_电子秤', '可回收物_电熨斗', '可回收物_电磁炉', '可回收物_电路板', '可回收物_电风扇', '可回收物_电饭煲', '可回收物_盘子', '可回收物_碗', '可回收物_箱子', '可回收物_纸板', '可回收物_衣架', '可回收物_袜子', '可回收物_裙子', '可回收物_裤子', '可回收物_计算器', '可回收物_订书机', '可回收物_话筒', '可回收物_路由器', '可回收物_轮胎', '可回收物_遥控器', '可回收物_钥匙', '可回收物_铁丝球', '可回收物_键盘', '可回收物_镊子', '可回收物_闹钟', '可回收物_雨伞', '可回收物_鞋', '可回收物_鼠标', '有害垃圾_太阳能电池', '有害垃圾_灯', '有害垃圾_电池', '有害垃圾_纽扣电池', '有害垃圾_胶水', '有害垃圾_药品包装', '有害垃圾_蓄电池']
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+rescaling (Rescaling)        (None, 224, 224, 3)       0         
+_________________________________________________________________
+resnet50 (Functional)        (None, 7, 7, 2048)        23587712  
+_________________________________________________________________
+global_average_pooling2d (Gl (None, 2048)              0         
+_________________________________________________________________
+dense (Dense)                (None, 120)               245880    
+=================================================================
+Total params: 23,833,592
+Trainable params: 245,880
+Non-trainable params: 23,587,712
+_________________________________________________________________
+2022-05-23 20:22:39.400431: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:176] None of the MLIR Optimization Passes are enabled (registered 2)
+2022-05-23 20:22:40.955905: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cudnn64_8.dll
+2022-05-23 20:22:42.096657: I tensorflow/stream_executor/cuda/cuda_dnn.cc:359] Loaded cuDNN version 8101
+2022-05-23 20:22:43.615020: W tensorflow/stream_executor/gpu/redzone_allocator.cc:314] Unknown: Failed to create a NewWriteableFile: C:\Users\С����\AppData\Local\Temp\/tempfile-LAPTOP-R5UG5FPN-4b5c-3152-5dface5a369b8 : �ܾ����ʡ�
+; Input/output error
+Relying on driver to perform ptx compilation. 
+Modify $PATH to customize ptxas location.
+This message will be only logged once.
+2022-05-23 20:22:43.672025: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cublas64_11.dll
+2022-05-23 20:22:44.316984: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cublasLt64_11.dll
+2022-05-23 20:22:45.030987: W tensorflow/core/common_runtime/bfc_allocator.cc:271] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.28GiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+2022-05-23 20:22:45.031417: W tensorflow/core/common_runtime/bfc_allocator.cc:271] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.28GiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+2022-05-23 20:22:45.063471: W tensorflow/core/common_runtime/bfc_allocator.cc:271] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.30GiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+2022-05-23 20:22:45.063851: W tensorflow/core/common_runtime/bfc_allocator.cc:271] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.30GiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+482/484 [============================>.] - ETA: 0s - loss: 3.0772 - accuracy: 0.31092022-05-23 20:23:55.802558: W tensorflow/core/common_runtime/bfc_allocator.cc:271] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.27GiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+2022-05-23 20:23:55.802912: W tensorflow/core/common_runtime/bfc_allocator.cc:271] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.27GiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+2022-05-23 20:23:55.829935: W tensorflow/core/common_runtime/bfc_allocator.cc:271] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.28GiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+2022-05-23 20:23:55.830282: W tensorflow/core/common_runtime/bfc_allocator.cc:271] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.28GiB with freed_by_count=0. The caller indicates that this is not a failure, but may mean that there could be performance gains if more memory were available.
+484/484 [==============================] - 77s 147ms/step - loss: 3.0756 - accuracy: 0.3109
+my_MobileNet test accuracy : 0.31091567873954773
+
+进程已结束，退出代码为 0

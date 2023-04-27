@@ -1,0 +1,187 @@
+C:\ProgramData\Anaconda3\envs\tensorflow-gpu\python.exe F:/毕设_垃圾分类/总结综合/my_MobileNet/MobileNetV2_Droup_train.py
+2022-05-25 08:17:12.511992: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cudart64_110.dll
+Found 31550 files belonging to 120 classes.
+2022-05-25 08:17:18.815462: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library nvcuda.dll
+2022-05-25 08:17:18.876787: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1733] Found device 0 with properties: 
+pciBusID: 0000:01:00.0 name: GeForce GTX 1650 computeCapability: 7.5
+coreClock: 1.56GHz coreCount: 16 deviceMemorySize: 4.00GiB deviceMemoryBandwidth: 119.24GiB/s
+2022-05-25 08:17:18.877608: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cudart64_110.dll
+2022-05-25 08:17:18.917089: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cublas64_11.dll
+2022-05-25 08:17:18.917254: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cublasLt64_11.dll
+2022-05-25 08:17:18.942399: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cufft64_10.dll
+2022-05-25 08:17:18.949101: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library curand64_10.dll
+2022-05-25 08:17:18.996229: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cusolver64_11.dll
+2022-05-25 08:17:19.012416: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cusparse64_11.dll
+2022-05-25 08:17:19.015546: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cudnn64_8.dll
+2022-05-25 08:17:19.015768: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1871] Adding visible gpu devices: 0
+2022-05-25 08:17:19.017793: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-05-25 08:17:19.019650: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1733] Found device 0 with properties: 
+pciBusID: 0000:01:00.0 name: GeForce GTX 1650 computeCapability: 7.5
+coreClock: 1.56GHz coreCount: 16 deviceMemorySize: 4.00GiB deviceMemoryBandwidth: 119.24GiB/s
+2022-05-25 08:17:19.020034: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1871] Adding visible gpu devices: 0
+2022-05-25 08:17:20.163713: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1258] Device interconnect StreamExecutor with strength 1 edge matrix:
+2022-05-25 08:17:20.163892: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1264]      0 
+2022-05-25 08:17:20.164299: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1277] 0:   N 
+2022-05-25 08:17:20.166923: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1418] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 2143 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:01:00.0, compute capability: 7.5)
+Found 3932 files belonging to 120 classes.
+C:\ProgramData\Anaconda3\envs\tensorflow-gpu\lib\site-packages\tensorflow\python\keras\backend.py:435: UserWarning: `tf.keras.backend.set_learning_phase` is deprecated and will be removed after 2020-10-11. To update it, simply pass a True/False value to the `training` argument of the `__call__` method of your layer or model.
+  warnings.warn('`tf.keras.backend.set_learning_phase` is deprecated and '
+['其他垃圾_PE塑料袋', '其他垃圾_一次性杯子', '其他垃圾_一次性棉签', '其他垃圾_口罩', '其他垃圾_唱片', '其他垃圾_干燥剂', '其他垃圾_打火机', '其他垃圾_搓澡巾', '其他垃圾_滚筒纸', '其他垃圾_点燃的香烟', '其他垃圾_眼镜', '其他垃圾_笔', '其他垃圾_胶带', '其他垃圾_验孕棒', '其他垃圾_鸡毛掸', '厨余垃圾_圣女果', '厨余垃圾_地瓜', '厨余垃圾_大蒜', '厨余垃圾_梨', '厨余垃圾_橙子', '厨余垃圾_火龙果', '厨余垃圾_瓜子壳', '厨余垃圾_番茄', '厨余垃圾_白菜叶', '厨余垃圾_苹果', '厨余垃圾_草莓', '厨余垃圾_菠萝', '厨余垃圾_菠萝蜜', '厨余垃圾_蘑菇', '厨余垃圾_蛋', '厨余垃圾_蛋挞', '厨余垃圾_蛋糕', '厨余垃圾_西瓜皮', '厨余垃圾_豆', '厨余垃圾_豆腐', '厨余垃圾_辣椒', '厨余垃圾_面包', '厨余垃圾_饼干', '厨余垃圾_香蕉皮', '可回收物_A4纸', '可回收物_一次性筷子', '可回收物_不锈钢管', '可回收物_乒乓球拍', '可回收物_书', '可回收物_保温杯', '可回收物_信封', '可回收物_充电头', '可回收物_充电宝', '可回收物_充电线', '可回收物_凳子', '可回收物_刀', '可回收物_剪刀', '可回收物_勺子叉子', '可回收物_包', '可回收物_卡', '可回收物_台灯', '可回收物_吹风机', '可回收物_呼啦圈', '可回收物_塑料瓶', '可回收物_塑料盆', '可回收物_头戴式耳机', '可回收物_尺子', '可回收物_布制品', '可回收物_帽子', '可回收物_手机', '可回收物_手电筒', '可回收物_手表', '可回收物_打气筒', '可回收物_拉杆箱', '可回收物_插线板', '可回收物_收音机', '可回收物_放大镜', '可回收物_易拉罐', '可回收物_望远镜', '可回收物_木制切菜板', '可回收物_木质梳子', '可回收物_木质锅铲', '可回收物_枕头', '可回收物_桌子', '可回收物_水壶', '可回收物_水杯', '可回收物_泡沫板', '可回收物_灭火器', '可回收物_热水瓶', '可回收物_电动剃须刀', '可回收物_电子秤', '可回收物_电熨斗', '可回收物_电磁炉', '可回收物_电路板', '可回收物_电风扇', '可回收物_电饭煲', '可回收物_盘子', '可回收物_碗', '可回收物_箱子', '可回收物_纸板', '可回收物_衣架', '可回收物_袜子', '可回收物_裙子', '可回收物_裤子', '可回收物_计算器', '可回收物_订书机', '可回收物_话筒', '可回收物_路由器', '可回收物_轮胎', '可回收物_遥控器', '可回收物_钥匙', '可回收物_铁丝球', '可回收物_键盘', '可回收物_镊子', '可回收物_闹钟', '可回收物_雨伞', '可回收物_鞋', '可回收物_鼠标', '有害垃圾_太阳能电池', '有害垃圾_灯', '有害垃圾_电池', '有害垃圾_纽扣电池', '有害垃圾_胶水', '有害垃圾_药品包装', '有害垃圾_蓄电池']
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+rescaling (Rescaling)        (None, 224, 224, 3)       0         
+_________________________________________________________________
+mobilenetv2_1.00_224 (Functi (None, 7, 7, 1280)        2257984   
+_________________________________________________________________
+global_average_pooling2d (Gl (None, 1280)              0         
+_________________________________________________________________
+dropout (Dropout)            (None, 1280)              0         
+_________________________________________________________________
+dense (Dense)                (None, 120)               153720    
+=================================================================
+Total params: 2,411,704
+Trainable params: 153,720
+Non-trainable params: 2,257,984
+_________________________________________________________________
+Epoch 1/30
+2022-05-25 08:17:23.962498: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:176] None of the MLIR Optimization Passes are enabled (registered 2)
+2022-05-25 08:17:27.494411: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cudnn64_8.dll
+2022-05-25 08:17:28.584023: I tensorflow/stream_executor/cuda/cuda_dnn.cc:359] Loaded cuDNN version 8101
+2022-05-25 08:17:29.962832: W tensorflow/stream_executor/gpu/redzone_allocator.cc:314] Unknown: Failed to create a NewWriteableFile: C:\Users\С����\AppData\Local\Temp\/tempfile-LAPTOP-R5UG5FPN-bbc-4780-5dfcaffb485a5 : �ܾ����ʡ�
+; Input/output error
+Relying on driver to perform ptx compilation. 
+Modify $PATH to customize ptxas location.
+This message will be only logged once.
+2022-05-25 08:17:30.004971: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cublas64_11.dll
+2022-05-25 08:17:31.132404: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cublasLt64_11.dll
+1972/1972 [==============================] - 662s 331ms/step - loss: 3.0591 - accuracy: 0.3301 - val_loss: 1.4792 - val_accuracy: 0.6897
+Epoch 2/30
+1972/1972 [==============================] - 565s 285ms/step - loss: 1.4269 - accuracy: 0.6534 - val_loss: 0.9847 - val_accuracy: 0.7617
+Epoch 3/30
+1972/1972 [==============================] - 568s 287ms/step - loss: 1.0597 - accuracy: 0.7291 - val_loss: 0.8220 - val_accuracy: 0.7854
+Epoch 4/30
+1972/1972 [==============================] - 567s 286ms/step - loss: 0.8967 - accuracy: 0.7625 - val_loss: 0.7448 - val_accuracy: 0.7988
+Epoch 5/30
+1972/1972 [==============================] - 569s 288ms/step - loss: 0.7926 - accuracy: 0.7874 - val_loss: 0.6940 - val_accuracy: 0.8108
+Epoch 6/30
+1972/1972 [==============================] - 575s 290ms/step - loss: 0.7222 - accuracy: 0.8060 - val_loss: 0.6617 - val_accuracy: 0.8210
+Epoch 7/30
+1972/1972 [==============================] - 562s 284ms/step - loss: 0.6706 - accuracy: 0.8165 - val_loss: 0.6382 - val_accuracy: 0.8245
+Epoch 8/30
+1972/1972 [==============================] - 547s 277ms/step - loss: 0.6288 - accuracy: 0.8261 - val_loss: 0.6190 - val_accuracy: 0.8314
+Epoch 9/30
+1972/1972 [==============================] - 546s 276ms/step - loss: 0.5971 - accuracy: 0.8361 - val_loss: 0.6031 - val_accuracy: 0.8360
+Epoch 10/30
+1972/1972 [==============================] - 546s 276ms/step - loss: 0.5681 - accuracy: 0.8423 - val_loss: 0.5932 - val_accuracy: 0.8365
+Epoch 11/30
+1972/1972 [==============================] - 550s 278ms/step - loss: 0.5395 - accuracy: 0.8487 - val_loss: 0.5842 - val_accuracy: 0.8403
+Epoch 12/30
+1972/1972 [==============================] - 545s 275ms/step - loss: 0.5244 - accuracy: 0.8531 - val_loss: 0.5730 - val_accuracy: 0.8444
+Epoch 13/30
+1972/1972 [==============================] - 556s 281ms/step - loss: 0.5058 - accuracy: 0.8581 - val_loss: 0.5682 - val_accuracy: 0.8431
+Epoch 14/30
+1972/1972 [==============================] - 548s 277ms/step - loss: 0.4857 - accuracy: 0.8609 - val_loss: 0.5621 - val_accuracy: 0.8456
+Epoch 15/30
+1972/1972 [==============================] - 549s 277ms/step - loss: 0.4727 - accuracy: 0.8669 - val_loss: 0.5602 - val_accuracy: 0.8466
+Epoch 16/30
+1972/1972 [==============================] - 548s 277ms/step - loss: 0.4561 - accuracy: 0.8697 - val_loss: 0.5557 - val_accuracy: 0.8464
+Epoch 17/30
+1972/1972 [==============================] - 546s 276ms/step - loss: 0.4453 - accuracy: 0.8729 - val_loss: 0.5525 - val_accuracy: 0.8484
+Epoch 18/30
+1972/1972 [==============================] - 551s 278ms/step - loss: 0.4335 - accuracy: 0.8756 - val_loss: 0.5486 - val_accuracy: 0.8477
+Epoch 19/30
+1972/1972 [==============================] - 554s 280ms/step - loss: 0.4227 - accuracy: 0.8786 - val_loss: 0.5480 - val_accuracy: 0.8505
+Epoch 20/30
+1972/1972 [==============================] - 566s 286ms/step - loss: 0.4129 - accuracy: 0.8835 - val_loss: 0.5430 - val_accuracy: 0.8502
+Epoch 21/30
+1972/1972 [==============================] - 568s 287ms/step - loss: 0.4084 - accuracy: 0.8818 - val_loss: 0.5405 - val_accuracy: 0.8515
+Epoch 22/30
+1972/1972 [==============================] - 555s 280ms/step - loss: 0.4021 - accuracy: 0.8822 - val_loss: 0.5406 - val_accuracy: 0.8507
+Epoch 23/30
+1972/1972 [==============================] - 546s 276ms/step - loss: 0.3881 - accuracy: 0.8867 - val_loss: 0.5379 - val_accuracy: 0.8515
+Epoch 24/30
+1972/1972 [==============================] - 549s 277ms/step - loss: 0.3889 - accuracy: 0.8888 - val_loss: 0.5355 - val_accuracy: 0.8538
+Epoch 25/30
+1972/1972 [==============================] - 547s 276ms/step - loss: 0.3759 - accuracy: 0.8898 - val_loss: 0.5371 - val_accuracy: 0.8515
+Epoch 26/30
+1972/1972 [==============================] - 557s 281ms/step - loss: 0.3680 - accuracy: 0.8924 - val_loss: 0.5333 - val_accuracy: 0.8520
+Epoch 27/30
+1972/1972 [==============================] - 547s 276ms/step - loss: 0.3681 - accuracy: 0.8908 - val_loss: 0.5315 - val_accuracy: 0.8512
+Epoch 28/30
+1972/1972 [==============================] - 549s 277ms/step - loss: 0.3593 - accuracy: 0.8957 - val_loss: 0.5312 - val_accuracy: 0.8522
+Epoch 29/30
+1972/1972 [==============================] - 549s 277ms/step - loss: 0.3560 - accuracy: 0.8931 - val_loss: 0.5315 - val_accuracy: 0.8538
+Epoch 30/30
+1972/1972 [==============================] - 547s 276ms/step - loss: 0.3522 - accuracy: 0.8957 - val_loss: 0.5321 - val_accuracy: 0.8507
+C:\ProgramData\Anaconda3\envs\tensorflow-gpu\lib\site-packages\tensorflow\python\keras\utils\generic_utils.py:497: CustomMaskWarning: Custom mask layers require a config and must override get_config. When loading, the custom mask layer must be passed to the custom_objects argument.
+  category=CustomMaskWarning)
+该循环程序运行时间： 16741.768199682236 s
+
+进程已结束，退出代码为 0
+
+
+
+
+C:\ProgramData\Anaconda3\envs\tensorflow-gpu\python.exe F:/毕设_垃圾分类/总结综合/my_MobileNet/model_test/Dropout_MobileNetV2_test.py
+2022-05-25 18:14:22.055667: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cudart64_110.dll
+120
+Found 3866 files belonging to 120 classes.
+2022-05-25 18:14:26.937271: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library nvcuda.dll
+2022-05-25 18:14:26.992071: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1733] Found device 0 with properties: 
+pciBusID: 0000:01:00.0 name: GeForce GTX 1650 computeCapability: 7.5
+coreClock: 1.56GHz coreCount: 16 deviceMemorySize: 4.00GiB deviceMemoryBandwidth: 119.24GiB/s
+2022-05-25 18:14:26.992397: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cudart64_110.dll
+2022-05-25 18:14:27.036636: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cublas64_11.dll
+2022-05-25 18:14:27.036802: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cublasLt64_11.dll
+2022-05-25 18:14:27.059449: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cufft64_10.dll
+2022-05-25 18:14:27.064691: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library curand64_10.dll
+2022-05-25 18:14:27.123228: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cusolver64_11.dll
+2022-05-25 18:14:27.137286: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cusparse64_11.dll
+2022-05-25 18:14:27.139896: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cudnn64_8.dll
+2022-05-25 18:14:27.140109: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1871] Adding visible gpu devices: 0
+2022-05-25 18:14:27.140820: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-05-25 18:14:27.141978: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1733] Found device 0 with properties: 
+pciBusID: 0000:01:00.0 name: GeForce GTX 1650 computeCapability: 7.5
+coreClock: 1.56GHz coreCount: 16 deviceMemorySize: 4.00GiB deviceMemoryBandwidth: 119.24GiB/s
+2022-05-25 18:14:27.142428: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1871] Adding visible gpu devices: 0
+2022-05-25 18:14:28.330475: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1258] Device interconnect StreamExecutor with strength 1 edge matrix:
+2022-05-25 18:14:28.330686: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1264]      0 
+2022-05-25 18:14:28.330817: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1277] 0:   N 
+2022-05-25 18:14:28.331504: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1418] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 2143 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1650, pci bus id: 0000:01:00.0, compute capability: 7.5)
+['其他垃圾_PE塑料袋', '其他垃圾_一次性杯子', '其他垃圾_一次性棉签', '其他垃圾_口罩', '其他垃圾_唱片', '其他垃圾_干燥剂', '其他垃圾_打火机', '其他垃圾_搓澡巾', '其他垃圾_滚筒纸', '其他垃圾_点燃的香烟', '其他垃圾_眼镜', '其他垃圾_笔', '其他垃圾_胶带', '其他垃圾_验孕棒', '其他垃圾_鸡毛掸', '厨余垃圾_圣女果', '厨余垃圾_地瓜', '厨余垃圾_大蒜', '厨余垃圾_梨', '厨余垃圾_橙子', '厨余垃圾_火龙果', '厨余垃圾_瓜子壳', '厨余垃圾_番茄', '厨余垃圾_白菜叶', '厨余垃圾_苹果', '厨余垃圾_草莓', '厨余垃圾_菠萝', '厨余垃圾_菠萝蜜', '厨余垃圾_蘑菇', '厨余垃圾_蛋', '厨余垃圾_蛋挞', '厨余垃圾_蛋糕', '厨余垃圾_西瓜皮', '厨余垃圾_豆', '厨余垃圾_豆腐', '厨余垃圾_辣椒', '厨余垃圾_面包', '厨余垃圾_饼干', '厨余垃圾_香蕉皮', '可回收物_A4纸', '可回收物_一次性筷子', '可回收物_不锈钢管', '可回收物_乒乓球拍', '可回收物_书', '可回收物_保温杯', '可回收物_信封', '可回收物_充电头', '可回收物_充电宝', '可回收物_充电线', '可回收物_凳子', '可回收物_刀', '可回收物_剪刀', '可回收物_勺子叉子', '可回收物_包', '可回收物_卡', '可回收物_台灯', '可回收物_吹风机', '可回收物_呼啦圈', '可回收物_塑料瓶', '可回收物_塑料盆', '可回收物_头戴式耳机', '可回收物_尺子', '可回收物_布制品', '可回收物_帽子', '可回收物_手机', '可回收物_手电筒', '可回收物_手表', '可回收物_打气筒', '可回收物_拉杆箱', '可回收物_插线板', '可回收物_收音机', '可回收物_放大镜', '可回收物_易拉罐', '可回收物_望远镜', '可回收物_木制切菜板', '可回收物_木质梳子', '可回收物_木质锅铲', '可回收物_枕头', '可回收物_桌子', '可回收物_水壶', '可回收物_水杯', '可回收物_泡沫板', '可回收物_灭火器', '可回收物_热水瓶', '可回收物_电动剃须刀', '可回收物_电子秤', '可回收物_电熨斗', '可回收物_电磁炉', '可回收物_电路板', '可回收物_电风扇', '可回收物_电饭煲', '可回收物_盘子', '可回收物_碗', '可回收物_箱子', '可回收物_纸板', '可回收物_衣架', '可回收物_袜子', '可回收物_裙子', '可回收物_裤子', '可回收物_计算器', '可回收物_订书机', '可回收物_话筒', '可回收物_路由器', '可回收物_轮胎', '可回收物_遥控器', '可回收物_钥匙', '可回收物_铁丝球', '可回收物_键盘', '可回收物_镊子', '可回收物_闹钟', '可回收物_雨伞', '可回收物_鞋', '可回收物_鼠标', '有害垃圾_太阳能电池', '有害垃圾_灯', '有害垃圾_电池', '有害垃圾_纽扣电池', '有害垃圾_胶水', '有害垃圾_药品包装', '有害垃圾_蓄电池']
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+rescaling (Rescaling)        (None, 224, 224, 3)       0         
+_________________________________________________________________
+mobilenetv2_1.00_224 (Functi (None, 7, 7, 1280)        2257984   
+_________________________________________________________________
+global_average_pooling2d (Gl (None, 1280)              0         
+_________________________________________________________________
+dropout (Dropout)            (None, 1280)              0         
+_________________________________________________________________
+dense (Dense)                (None, 120)               153720    
+=================================================================
+Total params: 2,411,704
+Trainable params: 153,720
+Non-trainable params: 2,257,984
+_________________________________________________________________
+2022-05-25 18:14:30.416500: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:176] None of the MLIR Optimization Passes are enabled (registered 2)
+2022-05-25 18:14:32.319585: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cudnn64_8.dll
+2022-05-25 18:14:32.992555: I tensorflow/stream_executor/cuda/cuda_dnn.cc:359] Loaded cuDNN version 8101
+2022-05-25 18:14:34.519756: W tensorflow/stream_executor/gpu/redzone_allocator.cc:314] Unknown: Failed to create a NewWriteableFile: C:\Users\С����\AppData\Local\Temp\/tempfile-LAPTOP-R5UG5FPN-37b4-11940-5dfd35703e1aa : �ܾ����ʡ�
+; Input/output error
+Relying on driver to perform ptx compilation. 
+Modify $PATH to customize ptxas location.
+This message will be only logged once.
+2022-05-25 18:14:34.555026: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cublas64_11.dll
+2022-05-25 18:14:35.217089: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cublasLt64_11.dll
+484/484 [==============================] - 77s 147ms/step - loss: 0.5748 - accuracy: 0.8528
+my_MobileNet test accuracy : 0.8528194427490234
+
+进程已结束，退出代码为 0
