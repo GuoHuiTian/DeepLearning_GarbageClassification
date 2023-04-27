@@ -48,17 +48,17 @@ ResNet残差块结构如图
 
 模型训练的结果如图
 
-![原始_ResNet50_epoch30](https://user-images.githubusercontent.com/131667281/234781749-848f9703-f9b1-48bc-9aa1-2edb89897841.png)
+![image](https://user-images.githubusercontent.com/131667281/234799631-6d2b092f-0352-49dd-9f3a-c08b2245a2be.png)
 
 经过30个epoch后，模型在val上的loss值为`3.0818`，accuracy为`0.3082`，能够明显的看出，模型收敛的速度极其缓慢，为了参考模型的具体的准确率，重新设定`epoch=200`，实验结果如图
 
-![原始_ResNet50_epoch200](https://user-images.githubusercontent.com/131667281/234782891-6e0c7a1b-afaa-4cd6-a78e-f9eee1251921.png)
+![image](https://user-images.githubusercontent.com/131667281/234800166-d4444f16-4451-451e-be2e-ae5d4c2ec40f.png)
 
 可以看出模型并没有实质性的改变，因此还需要进一步优化模型，考虑ResNet50模型的迁移策略问题，在上述实验中，我们冻结了ResNet50模型的全部卷积层，只训练针对垃圾分类任务的全连接层，但是由于ResNet50模型的参数量较多，模型的层级较深，只训练全连接层并不能很好的获取垃圾分类任务的特征。紧接着我对另外的迁移学习策略进行了实验，分别冻结网络浅层的前80层，以及全部层级都设定为可训练，当然这里的epoch依旧设置为30次，分别得到下图的结果
 
-![ResNet50_80layers_epoch30](https://user-images.githubusercontent.com/131667281/234784474-2b0ec96a-4973-4f51-8dfd-f0bac9d32f91.png)
+![image](https://user-images.githubusercontent.com/131667281/234800317-a6e9ddd7-7ce3-4718-81db-05261ba1396b.png)
 
-![ResNet50_all_layers_epoch30](https://user-images.githubusercontent.com/131667281/234784511-7f5b2a19-c2e7-4b3c-b23e-b754211daefc.png)
+![image](https://user-images.githubusercontent.com/131667281/234800340-f420f009-f394-4813-ad00-693c2660636c.png)
 
 针对于上述的实验结果能够明显看出，模型的收敛速度变快，并且准确率也得到了很大的提升。由于模型后期的应用问题，ResNet50模型博主就只研究到这里，读者可以根据实际任务需求对模型进行优化。
 
