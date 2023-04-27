@@ -60,5 +60,9 @@ ResNet残差块结构如图
 
 ![ResNet50_all_layers_epoch30](https://user-images.githubusercontent.com/131667281/234784511-7f5b2a19-c2e7-4b3c-b23e-b754211daefc.png)
 
-针对于这两个的实验结果能够明显看出，模型的收敛速度变快，并且准备率也得到了很大的提升
+针对于上述的实验结果能够明显看出，模型的收敛速度变快，并且准确率也得到了很大的提升。由于模型后期的应用问题，ResNet50模型博主就只研究到这里，读者可以根据实际任务需求对模型进行优化。
 
+### 2.2 MobileNetV2模型
+#### 2.2.1 MobileNetV2模型介绍
+2017年，Google公司提出了MobileNet模型，并应于ImageNet数据集上，对比与VGG16模型，在网络参数减小30倍的情况下，准确率只比VGG16低0.9%，用于移动端和嵌入式设备里表现优秀。随之2018年，Google公司在MobileNet模型的基础上提出了MobileNetV2模型，进一步推动了轻量化模型的进步。
+MobileNet模型是通过将标准卷积过程分离为深度卷积（Depthwise Convolution）和逐点卷积（Pointwise Convolution）假设输入特征图的大小是 $D_F\timesD_F\timesM$，使用 $D_K\timesD_K$的卷积核，输出的特征图的大小是 $D_H\timesD_H\timesN$，在这一层，使用标准卷积核的运算量为： $D_F\timesD_F\timesM\timesN\timesD_K\timesD_K$，使用深度可分离卷积的计算量为： $D_F\timesD_F\timesM\timesN+D_F\timesD_F\timesM\timesD_K\timesD_K$，由于提取过程中卷积核的改变，计算量有很大的减少，减少量为 $(D_F\timesD_F\timesM\timesN+D_F\timesD_F\timesM\timesD_K\timesD_K)/(D_F\timesD_F\timesM\timesN\timesD_K\timesD_K)=(1/N)+(1/D^2_K)$ 
