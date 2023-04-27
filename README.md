@@ -129,3 +129,13 @@ MobileNetV2模型是针对于MobileNet模型的改进，在此基础上提出了
 
 ![image](https://user-images.githubusercontent.com/131667281/234801924-1dcd418a-e5fa-4539-98e9-e6b9ab04febd.png)
 
+模型的准确率、loss函数的大小如表
+
+|  | Train | Validation | Test |
+|:--:| :--: | :--: | :--: |
+| Accuracy | 89.57% | 85.38% | 85.28% |
+| Loss | 0.3522 | 0.5315 | 0.5748 |
+
+在加入Dropout机制后，模型的表现稳定，且准确率依旧能够保持85%，因此将该模型确定为实际垃圾分类任务中的模型。
+
+## 仓库目录说明
