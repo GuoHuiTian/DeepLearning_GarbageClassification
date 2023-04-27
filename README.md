@@ -65,4 +65,31 @@ ResNet残差块结构如图
 ### 2.2 MobileNetV2模型
 #### 2.2.1 MobileNetV2模型介绍
 2017年，Google公司提出了MobileNet模型，并应于ImageNet数据集上，对比与VGG16模型，在网络参数减小30倍的情况下，准确率只比VGG16低0.9%，用于移动端和嵌入式设备里表现优秀。随之2018年，Google公司在MobileNet模型的基础上提出了MobileNetV2模型，进一步推动了轻量化模型的进步。
-MobileNet模型是通过将标准卷积过程分离为深度卷积（Depthwise Convolution）和逐点卷积（Pointwise Convolution）假设输入特征图的大小是 $D_F\timesD_F\timesM$，使用 $D_K\timesD_K$的卷积核，输出的特征图的大小是 $D_H\timesD_H\timesN$，在这一层，使用标准卷积核的运算量为： $D_F\timesD_F\timesM\timesN\timesD_K\timesD_K$，使用深度可分离卷积的计算量为： $D_F\timesD_F\timesM\timesN+D_F\timesD_F\timesM\timesD_K\timesD_K$，由于提取过程中卷积核的改变，计算量有很大的减少，减少量为 $(D_F\timesD_F\timesM\timesN+D_F\timesD_F\timesM\timesD_K\timesD_K)/(D_F\timesD_F\timesM\timesN\timesD_K\timesD_K)=(1/N)+(1/D^2_K)$ 
+
+MobileNet模型是通过将标准卷积过程分离为深度卷积（Depthwise Convolution）和逐点卷积（Pointwise Convolution）假设输入特征图的大小是 $D_F\times D_F\times M$，使用 $D_K\times D_K$的卷积核，输出的特征图的大小是 $D_H\times D_H\times N$，在这一层，使用标准卷积核的运算量为： $D_F\times D_F\times M\times N\times D_K\times D_K$，使用深度可分离卷积的计算量为： $D_F\times D_F\times M\times N+D_F\times D_F\times M\times D_K\times D_K$，由于提取过程中卷积核的改变，计算量有很大的减少，减少量为
+
+$$
+\frac{D_F\times D_F\times M\times N+D_F\times D_F\times M\times D_K\times D_K}{D_F\times D_F\times M\times N\times D_K\times D_K}=\frac{1}{N}+\frac{1}{D^2_K}
+$$ 
+
+MobileNetV2模型是针对于MobileNet模型的改进，在此基础上提出了逆向残差结构和线性瓶颈单元。上文中，我们介绍了ResNet的残差模块，逆向残差结构采用了与残差模块相反的设计方式，瓶颈残差模块的操作中，图像通道输入进来会通过逐点卷积后进行正常的卷积运算，然后在通过逐点卷积还原通道数。由于MobileNet中采用深度可分离卷积的方式，因此逆向残差模块中使用的方式如图
+
+![image](https://user-images.githubusercontent.com/131667281/234794339-8c0b326a-95f9-43e3-b585-9dfdd54afebb.png)
+
+线性瓶颈单元是MobileNetV2的另一个改进，当通过激活函数的通道数量较少时，ReLU函数很难保存完整的提取信息，因此MobileNetV2采用线性函数的方式，最大限度的保存提取的特征信息。MobileNetV2迁移学习模型如表
+
+| Layer(type) | Output Shape | Param |
+| :--: | :--: | :--: |
+| rescaling | (None,224,224,3) | 0 |
+| mobilenetv2_1.00_224 | (None,7,7,1280) | 2257984 |
+| global_average_pooling2d | (None,1028) | 0 |
+| dense | (None,120) | 153720 |
+
+预训练模型的复用中，我们删除原始的分类器，加入针对于垃圾分类任务的分类器。并根据常用的三种迁移策略，对模型进行微调。
+
+> 策略1：冻结全部卷积层，只训练针对垃圾分类任务的全连接层
+> 策略2：冻结前140层网络，训练剩余卷积层以及全连接层
+> 策略3：训练模型的全部卷积层以及全连接层
+
+#### 2.2.2 实验结果
+深度学习框架与超参数的设置跟ResNet50模型实验的设置相同。
